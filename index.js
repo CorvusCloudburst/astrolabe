@@ -6,6 +6,7 @@ import shardCommand from './commands/shard.js';
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
 
+// Function to set up commands
 const setCommand = (command) => {
 	if ('data' in command && 'execute' in command) {
 		client.commands.set(command.data.name, command);
@@ -14,12 +15,15 @@ const setCommand = (command) => {
 	}
 };
 
+// Commands to set up
 setCommand(shardCommand);
 
+// Notify that the bot is ready
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
+// Await commands
 client.on(Events.InteractionCreate, async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 	const command = interaction.client.commands.get(interaction.commandName);
