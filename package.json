@@ -1,0 +1,19 @@
+{
+  "name": "astrolabe",
+  "version": "1.0.0",
+  "description": "Sky Clock + Sky Shards, for Discord.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorvusCloudburst/astrolabe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CorvusCloudburst/astrolabe/issues"
+  },
+  "homepage": "https://github.com/CorvusCloudburst/astrolabe#readme"
+}
