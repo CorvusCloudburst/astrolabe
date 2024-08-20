@@ -3,9 +3,11 @@ Sky Clock + Sky Shards, for Discord.
 
 ## Setting up
 
+For a more general guide to creating a Discord bot, check out the [Discord.js guide](https://discordjs.guide/).
+
 ### Creating a Discord application and bot user
 
-[This tutorial](https://discordpy.readthedocs.io/en/stable/discord.html) will walk you through the process of creating a Discord application and an associated bot account.
+[This tutorial](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot) will walk you through the process of creating a Discord application and an associated bot account.
 
 Once your bot user is created, you will be provided with a token for it. You will only be shown this token once, so save it somewhere safe. Do not share it or merge it into a cloud-hosted code repo.
 
