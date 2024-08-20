@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CorvusCloudburst/astrolabe/issues"
   },
-  "homepage": "https://github.com/CorvusCloudburst/astrolabe#readme"
+  "homepage": "https://github.com/CorvusCloudburst/astrolabe#readme",
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
 }
