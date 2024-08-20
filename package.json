@@ -18,5 +18,9 @@
   "homepage": "https://github.com/CorvusCloudburst/astrolabe#readme",
   "dependencies": {
     "discord.js": "^14.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0"
   }
 }
