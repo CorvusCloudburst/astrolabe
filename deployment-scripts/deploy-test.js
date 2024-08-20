@@ -1,28 +1,19 @@
 import 'dotenv/config';
 import { REST, Routes } from 'discord.js';
-import path, { dirname } from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import shardCommand from '../commands/shard.js';
 
 const commands = [];
-// Grab all the command files from the commands directory you created earlier
-const commandsPath = path.join(__dirname, '../commands');
-console.log(`Searching folder: ${commandsPath}`);
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-// Grab the SlashCommandBuilder#toJSON() output of each command's data for deployment
-for (const file of commandFiles) {
-    const filePath = path.join(commandsPath, file);
-    const command = require(filePath);
-    console.log(`Reading file: ${filePath}`);
+
+const readCommand = (command) => {
+    console.log(`Updating command: ${command.name}`);
     if ('data' in command && 'execute' in command) {
         commands.push(command.data.toJSON());
     } else {
-        console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
+        console.log(`[WARNING] The command ${command.name} is missing a required "data" or "execute" property.`);
     }
-}
+};
+
+readCommand(shardCommand);
 
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(process.env.DISCORD_TOKEN);
