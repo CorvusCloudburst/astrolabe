@@ -1,6 +1,7 @@
 import { SlashCommandBuilder } from "discord.js";
 import { getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
-import { discordDate, discordDateToday, discordTime } from "../lib/discordUtils.js";
+import { discordDate, discordTime } from "../lib/discordUtils.js";
+import { shards } from "../assets/externalImages.js";
 
 /** ---------------------------------------
  *  Displays today's shard info
@@ -40,17 +41,20 @@ const shardEmbed = (shard) => {
         name: 'Shard',
       },
       color: 0x929292,
-      title: 'No Shard',
+      title: 'No shard eruption on this day.',
       description: discordDate(shard.date),
     } 
     : {
       author: {
         name: 'Shard',
-        icon_url: shard.type === shardTypes.STRONG ? 'https://i.imgur.com/bh4b6P4.png' : 'https://i.imgur.com/PEv10fl.png',
+        icon_url: shard.type === shardTypes.STRONG ? shards.red : shards.black,
       },
       color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
-      title: `${shard.realm.name}: ${shard.location}`,
+      title: `${shard.realm.name}: ${shard.location.name}`,
       description: discordDate(shard.date),
+      image: {
+        url: location.icon,
+      },
       fields: [
         {
           name: '', // empty name slot to keep it on one line
