@@ -33,5 +33,5 @@ export const mapIcons = {
     vaultOfKnowledge: {
         starlightDesert: 'https://i.imgur.com/KwNqQPO.png',
         jellyfishCove: 'https://i.imgur.com/Tbtjw8r.png',
-    };
+    },
 };

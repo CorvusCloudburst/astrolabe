@@ -37,23 +37,20 @@ export const nextShardCommand = {
 const shardEmbed = (shard) => {
   return shard.skipped 
     ? {
-      author: {
-        name: 'Shard',
-      },
       color: 0x929292,
-      title: 'No shard eruption on this day.',
+      title: 'No shard eruption.',
       description: discordDate(shard.date),
     } 
     : {
       author: {
-        name: 'Shard',
+        name: 'Shard Eruption',
         icon_url: shard.type === shardTypes.STRONG ? shards.red : shards.black,
       },
       color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
       title: `${shard.realm.name}: ${shard.location.name}`,
       description: discordDate(shard.date),
-      image: {
-        url: location.icon,
+      thumbnail: {
+        url: shard.location.icon,
       },
       fields: [
         {
