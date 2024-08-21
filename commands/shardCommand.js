@@ -1,19 +1,38 @@
 import { SlashCommandBuilder } from "discord.js";
-import { getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
-import { discordDateToday } from "../lib/discordUtils.js";
+import { getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
+import { discordDate, discordDateToday, discordTime } from "../lib/discordUtils.js";
 
-const shardCommand = {
+/** ---------------------------------------
+ *  Displays today's shard info
+ ** --------------------------------------- */
+export const shardCommand = {
     name: 'Shard',
     data: new SlashCommandBuilder()
       .setName('shard')
-      .setDescription('Get the next shard fall.'),
+      .setDescription("Get today's shard fall."),
     async execute(interaction) {
       const embed = shardEmbed(getTodaysShard());
-      console.dir(embed);
 		  await interaction.reply({ embeds: [embed] });
 	},
 };
 
+/** ---------------------------------------
+ *  Displays the next non-skipped shard
+ ** --------------------------------------- */
+export const nextShardCommand = {
+  name: 'Next Shard',
+  data: new SlashCommandBuilder()
+    .setName('nextshard')
+    .setDescription('Get the next shard fall.'),
+  async execute(interaction) {
+    const embed = shardEmbed(getNextShard());
+    await interaction.reply({ embeds: [embed] });
+},
+};
+
+/** ---------------------------------------
+ *  Generates the display for a shard
+ ** --------------------------------------- */
 const shardEmbed = (shard) => {
   return shard.skipped 
     ? {
@@ -22,7 +41,7 @@ const shardEmbed = (shard) => {
       },
       color: 0x929292,
       title: 'No Shard',
-      description: discordDateToday(),
+      description: discordDate(shard.date),
     } 
     : {
       author: {
@@ -30,13 +49,8 @@ const shardEmbed = (shard) => {
       },
       color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
       title: `${shard.realm.name}: ${shard.location}`,
-      description: discordDateToday(),
+      description: discordDate(shard.date),
       fields: [
-        {
-          name: '1st Fall',
-          value: `**${shard.realm.name}: ${shard.location}**`,
-          inline: false,
-        },
         {
           name: '1st Fall',
           value: discordTime(shard.landingTimes[0]),
@@ -48,12 +62,10 @@ const shardEmbed = (shard) => {
           inline: true,
         },
         {
-          name: '2nd Fall',
+          name: '3rd Fall',
           value: discordTime(shard.landingTimes[2]),
           inline: true,
         },
       ],
     };
 };
-
-export default shardCommand;
