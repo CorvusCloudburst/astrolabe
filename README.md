@@ -14,7 +14,7 @@ Once your bot user is created, you will be provided with a token for it. You wil
 
 ### Running Astrolabe
 
-In the root of this project, create a `.env` file. This file is already ignored using `.gitignore`, but just in case it needs to be said, _do not merge this file into a cloud-hosted repository_.
+In the root of this project, create a `.env` file. This file is already ignored using `.gitignore`, but just in case it needs to be repeated, _do not merge this file into a cloud-hosted repository_.
 
 Add the following lines to your `.env`:
 ```
