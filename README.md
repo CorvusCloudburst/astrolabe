@@ -1,5 +1,5 @@
 ![Valley of Triumph map](./assets/mapBanner.png "Valley of Triumph map") 
-<h1 style="font-size:7rem;color:#ffd893"><img src="./assets/mapIcon.jpg"/> Astrolabe</h1>
+<h1 style="font-size:7rem;color:#e7c386;font-family:Times,serif;"><img src="./assets/mapIcon.jpg" alt="Citadel map icon" title="Citadel map icon"/> Astrolabe</h1>
 Sky Clock + Sky Shards, for Discord.
 
 ## Setting up
@@ -51,6 +51,7 @@ These commands are planned for the future, but I haven't had the chance to imple
 | **/geyser**  | displays today's geyser info |
 | **/grandma**  | displays today's grandma info |
 | **/turtle**  | displays today's turtle info |
+| **/about**  | links to this bot's github README |
 
 ## Code Changes
 
