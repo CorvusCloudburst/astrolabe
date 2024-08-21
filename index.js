@@ -1,10 +1,11 @@
 import 'dotenv/config';
 import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
 import shardCommand from './commands/shardCommand.js';
+import { allCommands } from './deployment-scripts/deployCommands.js';
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-client.commands = new Collection();
+client.commands = new Collection(allCommands());
 
 // Function to set up commands
 const setCommand = (command) => {
