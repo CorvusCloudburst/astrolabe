@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
-import shardCommand from './commands/shard.js';
+import shardCommand from './commands/shardCommand.js';
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -15,8 +15,12 @@ const setCommand = (command) => {
 	}
 };
 
-// Commands to set up
+/** ---------------------------------------
+ *  ADD NEW COMMANDS HERE
+ *  format: setCommand(newCommand);
+ ** --------------------------------------- */
 setCommand(shardCommand);
+/*  --------------------------------------- */
 
 // Notify that the bot is ready
 client.once(Events.ClientReady, readyClient => {

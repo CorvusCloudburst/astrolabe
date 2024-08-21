@@ -12,9 +12,9 @@ const rest = new REST().setToken(process.env.DISCORD_TOKEN);
     try {
         console.log(`Started refreshing ${commands.length} application (/) commands.`);
 
-        // Push to test server only
+        // Push to global application
         const data = await rest.put(
-            Routes.applicationGuildCommands(process.env.DISCORD_APPLICATION_ID, process.env.DISCORD_TEST_SERVER_ID),
+            Routes.applicationCommands(process.env.DISCORD_APPLICATION_ID),
             { body: commands },
         );
 
