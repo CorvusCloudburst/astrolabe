@@ -1,5 +1,5 @@
 ![Valley of Triumph map](./assets/mapBanner.png "Valley of Triumph map") 
-<h1 style="font-size:7rem;color:#e7c386;font-family:Times,serif;"><img src="./assets/mapIcon.jpg" alt="Citadel map icon" title="Citadel map icon"/> Astrolabe</h1>
+<h1 style="font-size:6rem;color:#e7c386;font-family:Times,serif;"><img src="./assets/mapIcon.jpg" alt="Citadel map icon" title="Citadel map icon"/> ˖° Astrolabe ✧˖°.</h1>
 Sky Clock + Sky Shards, for Discord.
 
 ## Setting up
@@ -62,7 +62,10 @@ To deploy your commands for use on your personal server to test them out, use:
 npm run deploy:test
 ```
 
-Once you have thoroughly tested out your commands and are confident they are ready for usage, you can deploy them globally by running:
+Once you have thoroughly tested out your commands and are confident they are ready for usage, you can deploy them globally by running: (TODO: NOT CURRENTLY WRITTEN)
 ```
 npm run deploy:global
 ```
+
+## Sources & Credits
+The information used in this bot was acquired from [The Sky Wiki](https://sky-children-of-the-light.fandom.com/wiki/Shard_Eruptions#Schedule), with credit to the [Sky Shards](https://sky-shards.pages.dev) squad for their investigative work tracking shard times.
