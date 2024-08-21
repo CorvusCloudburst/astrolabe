@@ -1,4 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
+import { getTodaysShard, stringFromShard } from "../lib/shard.js";
 
 const shardCommand = {
     name: 'Shard',
@@ -6,7 +7,7 @@ const shardCommand = {
       .setName('shard')
       .setDescription('Get the next shard fall.'),
     async execute(interaction) {
-		await interaction.reply('Pong!');
+		  await interaction.reply(stringFromShard(getTodaysShard()));
 	},
 };
 

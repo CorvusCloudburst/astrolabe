@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { REST, Routes } from 'discord.js';
-import shardCommand from '../commands/shard.js';
+import shardCommand from '../commands/shardCommand.js';
 
 const commands = [];
 
