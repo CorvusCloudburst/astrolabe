@@ -57,6 +57,8 @@ These commands are planned for the future, but I haven't had the chance to imple
 
 If you add, remove, or modify a command, you will need to deploy your new commands so that the Discord API knows how to handle them.
 
+First, add the commands in the marked areas of the `index.js`, `deploy-test.js`, and `deploy-prod.js` files.
+
 To deploy your commands for use on your personal server to test them out, use:
 ```
 npm run deploy:test

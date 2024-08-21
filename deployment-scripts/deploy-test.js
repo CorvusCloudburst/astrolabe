@@ -13,7 +13,12 @@ const readCommand = (command) => {
     }
 };
 
+/** ---------------------------------------
+ *  ADD NEW COMMANDS HERE
+ *  format: readCommand(newCommand);
+ ** --------------------------------------- */
 readCommand(shardCommand);
+/*  --------------------------------------- */
 
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(process.env.DISCORD_TOKEN);

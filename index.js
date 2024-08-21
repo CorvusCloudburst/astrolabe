@@ -15,8 +15,12 @@ const setCommand = (command) => {
 	}
 };
 
-// Commands to set up
+/** ---------------------------------------
+ *  ADD NEW COMMANDS HERE
+ *  format: setCommand(newCommand);
+ ** --------------------------------------- */
 setCommand(shardCommand);
+/*  --------------------------------------- */
 
 // Notify that the bot is ready
 client.once(Events.ClientReady, readyClient => {
