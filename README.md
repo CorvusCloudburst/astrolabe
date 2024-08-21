@@ -40,6 +40,7 @@ The application will start. You should now see the bot as logged in on your serv
 | Command | Description |
 | ------- | ----------- |
 | **/shard**  | displays the shard info for the current day |
+| **/nextshard**  | displays the shard info for the next non-skipped shard |
 
 ### WIP Commands
 These commands are planned for the future, but I haven't had the chance to implement them yet.
@@ -47,7 +48,6 @@ These commands are planned for the future, but I haven't had the chance to imple
 | Command | Description |
 | ------- | ----------- |
 | **/today**  | displays all the supported events for today |
-| **/nextshard**  | displays the shard info for the next non-skipped shard |
 | **/geyser**  | displays today's geyser info |
 | **/grandma**  | displays today's grandma info |
 | **/turtle**  | displays today's turtle info |

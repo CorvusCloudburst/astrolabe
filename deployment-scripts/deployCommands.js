@@ -1,4 +1,4 @@
-import shardCommand from '../commands/shardCommand.js';
+import { shardCommand, nextShardCommand } from '../commands/shardCommand.js';
 
 const readCommand = (commands, command) => {
     console.log(`Updating command: ${command.name}`);
@@ -17,6 +17,7 @@ export const allCommands = () => {
      *  format: readCommand(commands, {newCommand});
      ** --------------------------------------- */
     readCommand(commands, shardCommand);
+    readCommand(commands, nextShardCommand);
     /*  --------------------------------------- */
 
     return commands;
