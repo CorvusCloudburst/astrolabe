@@ -14,7 +14,7 @@ export const allCommands = () => {
 
     /** ---------------------------------------
      *  ADD NEW COMMANDS HERE
-     *  format: readCommand(newCommand);
+     *  format: readCommand(commands, {newCommand});
      ** --------------------------------------- */
     readCommand(commands, shardCommand);
     /*  --------------------------------------- */
