@@ -12,7 +12,7 @@ const rest = new REST().setToken(process.env.DISCORD_TOKEN);
     try {
         console.log(`Started refreshing ${commands.length} application (/) commands.`);
 
-        // The put method is used to fully refresh all commands in the guild with the current set
+        // Push to test server only
         const data = await rest.put(
             Routes.applicationGuildCommands(process.env.DISCORD_APPLICATION_ID, process.env.DISCORD_TEST_SERVER_ID),
             { body: commands },
@@ -20,7 +20,6 @@ const rest = new REST().setToken(process.env.DISCORD_TOKEN);
 
         console.log(`Successfully reloaded ${data.length} application (/) commands.`);
     } catch (error) {
-        // And of course, make sure you catch and log any errors!
         console.error(error);
     }
 })();
