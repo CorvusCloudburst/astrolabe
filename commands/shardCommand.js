@@ -46,11 +46,17 @@ const shardEmbed = (shard) => {
     : {
       author: {
         name: 'Shard',
+        icon_url: shard.type === shardTypes.STRONG ? 'https://i.imgur.com/bh4b6P4.png' : 'https://i.imgur.com/PEv10fl.png',
       },
       color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
       title: `${shard.realm.name}: ${shard.location}`,
       description: discordDate(shard.date),
       fields: [
+        {
+          name: '', // empty name slot to keep it on one line
+          value: `**Reward:** ${shard.reward}`,
+          inline: false,
+        },
         {
           name: '1st Fall',
           value: discordTime(shard.landingTimes[0]),
