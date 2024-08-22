@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
-import { getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
+import { getNextRedShard, getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
 import { discordDate, discordTime } from "../lib/discordUtils.js";
 import { shards } from "../assets/externalImages.js";
 
@@ -7,7 +7,7 @@ import { shards } from "../assets/externalImages.js";
  *  Displays today's shard info
  ** --------------------------------------- */
 export const shardCommand = {
-    name: 'Shard',
+    name: "Today's Shard Info",
     data: new SlashCommandBuilder()
       .setName('shard')
       .setDescription("Get today's shard fall."),
@@ -28,7 +28,21 @@ export const nextShardCommand = {
   async execute(interaction) {
     const embed = shardEmbed(getNextShard());
     await interaction.reply({ embeds: [embed] });
-},
+  },
+};
+
+/** ---------------------------------------
+ *  Displays the next non-skipped RED shard
+ ** --------------------------------------- */
+export const nextRedShardCommand = {
+  name: 'Next Red Shard',
+  data: new SlashCommandBuilder()
+    .setName('nextredshard')
+    .setDescription('Get the next RED shard fall.'),
+  async execute(interaction) {
+    const embed = shardEmbed(getNextRedShard());
+    await interaction.reply({ embeds: [embed] });
+  },
 };
 
 /** ---------------------------------------
