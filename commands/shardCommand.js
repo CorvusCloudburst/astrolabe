@@ -32,7 +32,7 @@ export const nextShardCommand = {
 };
 
 /** ---------------------------------------
- *  Generates the display for a shard
+ *  Generates the display for a shard eruption
  ** --------------------------------------- */
 const shardEmbed = (shard) => {
   return shard.skipped 
@@ -48,14 +48,14 @@ const shardEmbed = (shard) => {
       },
       color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
       title: `${shard.realm.name}: ${shard.location.name}`,
-      description: discordDate(shard.date),
+      description: `**Reward:** ${shard.reward}`,
       thumbnail: {
         url: shard.location.icon,
       },
       fields: [
         {
           name: '', // empty name slot to keep it on one line
-          value: `**Reward:** ${shard.reward}`,
+          value: discordDate(shard.date),
           inline: false,
         },
         {
