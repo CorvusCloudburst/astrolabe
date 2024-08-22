@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
-import { getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
+import { getNextRedShard, getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
 import { discordDate, discordTime } from "../lib/discordUtils.js";
 import { shards } from "../assets/externalImages.js";
 
@@ -7,7 +7,7 @@ import { shards } from "../assets/externalImages.js";
  *  Displays today's shard info
  ** --------------------------------------- */
 export const shardCommand = {
-    name: 'Shard',
+    name: "Today's Shard Info",
     data: new SlashCommandBuilder()
       .setName('shard')
       .setDescription("Get today's shard fall."),
@@ -28,11 +28,25 @@ export const nextShardCommand = {
   async execute(interaction) {
     const embed = shardEmbed(getNextShard());
     await interaction.reply({ embeds: [embed] });
-},
+  },
 };
 
 /** ---------------------------------------
- *  Generates the display for a shard
+ *  Displays the next non-skipped RED shard
+ ** --------------------------------------- */
+export const nextRedShardCommand = {
+  name: 'Next Red Shard',
+  data: new SlashCommandBuilder()
+    .setName('nextredshard')
+    .setDescription('Get the next RED shard fall.'),
+  async execute(interaction) {
+    const embed = shardEmbed(getNextRedShard());
+    await interaction.reply({ embeds: [embed] });
+  },
+};
+
+/** ---------------------------------------
+ *  Generates the display for a shard eruption
  ** --------------------------------------- */
 const shardEmbed = (shard) => {
   return shard.skipped 
@@ -48,14 +62,14 @@ const shardEmbed = (shard) => {
       },
       color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
       title: `${shard.realm.name}: ${shard.location.name}`,
-      description: discordDate(shard.date),
+      description: `**Reward:** ${shard.reward}`,
       thumbnail: {
         url: shard.location.icon,
       },
       fields: [
         {
           name: '', // empty name slot to keep it on one line
-          value: `**Reward:** ${shard.reward}`,
+          value: discordDate(shard.date),
           inline: false,
         },
         {
