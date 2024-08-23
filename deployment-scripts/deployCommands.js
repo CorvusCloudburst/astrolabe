@@ -1,4 +1,5 @@
 import { geyserCommand } from '../commands/geyserCommand.js';
+import { grandmaCommand } from '../commands/grandmaCommand.js';
 import { nextShardCommand, nextRedShardCommand } from '../commands/shardCommand.js';
 
 const readCommand = (commands, command) => {
@@ -19,6 +20,7 @@ export const allCommands = () => {
     readCommand(commands, nextShardCommand);
     readCommand(commands, nextRedShardCommand);
     readCommand(commands, geyserCommand);
+    readCommand(commands, grandmaCommand);
     /*  --------------------------------------- */
 
     return commands;
