@@ -1,5 +1,6 @@
 import { geyserCommand } from '../commands/geyserCommand.js';
-import { shardCommand, nextShardCommand, nextRedShardCommand } from '../commands/shardCommand.js';
+import { grandmaCommand } from '../commands/grandmaCommand.js';
+import { nextShardCommand, nextRedShardCommand } from '../commands/shardCommand.js';
 
 const readCommand = (commands, command) => {
     console.log(`Updating command: ${command.name}`);
@@ -16,10 +17,10 @@ export const allCommands = () => {
     /** ---------------------------------------
      *  ADD NEW COMMANDS HERE
      ** --------------------------------------- */
-    readCommand(commands, shardCommand);
     readCommand(commands, nextShardCommand);
     readCommand(commands, nextRedShardCommand);
     readCommand(commands, geyserCommand);
+    readCommand(commands, grandmaCommand);
     /*  --------------------------------------- */
 
     return commands;

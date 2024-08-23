@@ -4,28 +4,15 @@ import { discordDate, discordTime } from "../lib/discordUtils.js";
 import { shardIcons } from "../assets/externalImages.js";
 import { colors } from "../lib/globals.js";
 
-/** ---------------------------------------
- *  Displays today's shard info
- ** --------------------------------------- */
-export const shardCommand = {
-    name: "Today's Shard Info",
-    data: new SlashCommandBuilder()
-      .setName('shard')
-      .setDescription("Get today's shard fall."),
-    async execute(interaction) {
-      const embed = shardEmbed(getTodaysShard());
-		  await interaction.reply({ embeds: [embed] });
-	},
-};
 
 /** ---------------------------------------
  *  Displays the next shard
  ** --------------------------------------- */
 export const nextShardCommand = {
-  name: 'Next Shard',
+  name: 'Shard Eruption',
   data: new SlashCommandBuilder()
-    .setName('nextshard')
-    .setDescription('Get the next shard fall.'),
+    .setName('shard')
+    .setDescription('Next shard eruption'),
   async execute(interaction) {
     const embed = shardEmbed(getNextShard());
     await interaction.reply({ embeds: [embed] });
@@ -36,10 +23,10 @@ export const nextShardCommand = {
  *  Displays the next RED shard
  ** --------------------------------------- */
 export const nextRedShardCommand = {
-  name: 'Next Red Shard',
+  name: 'Strong Shard Eruption',
   data: new SlashCommandBuilder()
-    .setName('nextredshard')
-    .setDescription('Get the next RED shard fall.'),
+    .setName('redshard')
+    .setDescription('Next RED shard eruption (Gives Ascended Candles)'),
   async execute(interaction) {
     const embed = shardEmbed(getNextRedShard());
     await interaction.reply({ embeds: [embed] });
