@@ -2,6 +2,7 @@ import { SlashCommandBuilder } from "discord.js";
 import { getNextRedShard, getNextShard, getTodaysShard, shardTypes } from "../lib/shard.js";
 import { discordDate, discordTime } from "../lib/discordUtils.js";
 import { shards } from "../assets/externalImages.js";
+import { colors } from "../lib/globals.js";
 
 /** ---------------------------------------
  *  Displays today's shard info
@@ -18,7 +19,7 @@ export const shardCommand = {
 };
 
 /** ---------------------------------------
- *  Displays the next non-skipped shard
+ *  Displays the next shard
  ** --------------------------------------- */
 export const nextShardCommand = {
   name: 'Next Shard',
@@ -32,7 +33,7 @@ export const nextShardCommand = {
 };
 
 /** ---------------------------------------
- *  Displays the next non-skipped RED shard
+ *  Displays the next RED shard
  ** --------------------------------------- */
 export const nextRedShardCommand = {
   name: 'Next Red Shard',
@@ -60,7 +61,7 @@ const shardEmbed = (shard) => {
         name: 'Shard Eruption',
         icon_url: shard.type === shardTypes.STRONG ? shards.red : shards.black,
       },
-      color: shard.type === shardTypes.STRONG ? 0xc40000 : 0x000000,
+      color: shard.type === shardTypes.STRONG ? colors.red : colors.black,
       title: `${shard.realm.name}: ${shard.location.name}`,
       description: `**Reward:** ${shard.reward}`,
       thumbnail: {
