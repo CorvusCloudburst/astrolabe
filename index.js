@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
 import { nextRedShardCommand, nextShardCommand, shardCommand } from './commands/shardCommand.js';
+import { geyserCommand } from './commands/geyserCommand.js';
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -21,6 +22,7 @@ const setCommand = (command) => {
 setCommand(shardCommand);
 setCommand(nextShardCommand);
 setCommand(nextRedShardCommand);
+setCommand(geyserCommand);
 /*  --------------------------------------- */
 
 // Notify that the bot is ready
