@@ -44,6 +44,7 @@ The application will start. You should now see the bot as logged in on your serv
 | **/geyser**  | displays the next geyser eruption |
 | **/grandma**  | displays the next dinner at grandma's |
 | **/turtle**  | displays the next sanctuary turtle sunset |
+| **/candlerun**  | displays the next full run of wax events |
 
 ### WIP Commands
 These commands are planned for the future, but I haven't had the chance to implement them yet.
