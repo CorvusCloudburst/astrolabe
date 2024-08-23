@@ -3,6 +3,7 @@ import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
 import { nextRedShardCommand, nextShardCommand } from './commands/shardCommand.js';
 import { geyserCommand } from './commands/geyserCommand.js';
 import { grandmaCommand } from './commands/grandmaCommand.js';
+import { turtleCommand } from './commands/turtleCommand.js';
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -24,6 +25,7 @@ setCommand(nextShardCommand);
 setCommand(nextRedShardCommand);
 setCommand(geyserCommand);
 setCommand(grandmaCommand);
+setCommand(turtleCommand);
 /*  --------------------------------------- */
 
 // Notify that the bot is ready
