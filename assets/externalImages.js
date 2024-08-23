@@ -1,9 +1,10 @@
 export const shardIcons = {
-    red: 'https://i.imgur.com/bh4b6P4.png',
+    red: 'https://i.imgur.com/NcpzUES.png',
     black: 'https://i.imgur.com/PEv10fl.png',
 };
 
 export const geyserIcon = 'https://i.imgur.com/xZtbp7D.png';
+export const grandmaIcon = 'https://i.imgur.com/QXxqmZS.png';
 
 export const mapIcons = {
     daylightPrairie: {

@@ -8,7 +8,7 @@ import { geyserIcon, mapIcons } from "../assets/externalImages.js";
  * Displays the next geyser event, as well as if the geyser is currently active.
  ** --------------------------------------- */
 export const geyserCommand = {
-    name: "Next Geyser",
+    name: "Polluted Geyser",
     data: new SlashCommandBuilder()
       .setName('geyser')
       .setDescription("Next geyser eruption"),
@@ -24,7 +24,7 @@ const geyserEmbed = () =>  {
     const isActiveNow = isGeyserActive();
     return {
         author: {
-            name: 'Geyser',
+            name: 'Polluted Geyser',
             icon_url: geyserIcon,
           },
           color: colors.blue,
