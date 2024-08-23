@@ -2,7 +2,7 @@ import { SlashCommandBuilder } from "discord.js";
 import { getNextGeyserTime, isGeyserActive } from "../lib/geyser.js";
 import { discordTime } from "../lib/discordUtils.js";
 import { colors } from "../lib/globals.js";
-import { mapIcons } from "../assets/externalImages.js";
+import { geyserIcon, mapIcons } from "../assets/externalImages.js";
 
 /** ---------------------------------------
  * Displays the next geyser event, as well as if the geyser is currently active.
@@ -24,7 +24,7 @@ const geyserEmbed = () =>  {
     return {
         author: {
             name: 'Geyser',
-            icon_url: '',
+            icon_url: geyserIcon,
           },
           color: colors.blue,
           title: `${isGeyserActive() ? `The geyser is currently active! ${getRemainingGeyserMinutes()} minutes remain.` : ''}`,

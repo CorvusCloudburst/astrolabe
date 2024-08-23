@@ -1,7 +1,7 @@
 import { SlashCommandBuilder } from "discord.js";
 import { getNextRedShard, getNextShard, getTodaysShard, shardTypes } from "../lib/shard.js";
 import { discordDate, discordTime } from "../lib/discordUtils.js";
-import { shards } from "../assets/externalImages.js";
+import { shardIcons } from "../assets/externalImages.js";
 import { colors } from "../lib/globals.js";
 
 /** ---------------------------------------
@@ -59,7 +59,7 @@ const shardEmbed = (shard) => {
     : {
       author: {
         name: 'Shard Eruption',
-        icon_url: shard.type === shardTypes.STRONG ? shards.red : shards.black,
+        icon_url: shard.type === shardTypes.STRONG ? shardIcons.red : shardIcons.black,
       },
       color: shard.type === shardTypes.STRONG ? colors.red : colors.black,
       title: `${shard.realm.name}: ${shard.location.name}`,
