@@ -39,9 +39,8 @@ The application will start. You should now see the bot as logged in on your serv
 
 | Command | Description |
 | ------- | ----------- |
-| **/shard**  | displays the shard eruption for the current day |
-| **/nextshard**  | displays the next shard eruption |
-| **/nextredshard**  | displays the next RED shard eruption |
+| **/shard**  | displays the next shard eruption |
+| **/redshard**  | displays the next RED shard eruption |
 | **/geyser**  | displays the next geyser eruption |
 
 ### WIP Commands
