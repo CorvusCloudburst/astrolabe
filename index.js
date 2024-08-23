@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
-import { nextRedShardCommand, nextShardCommand, shardCommand } from './commands/shardCommand.js';
+import { nextRedShardCommand, nextShardCommand } from './commands/shardCommand.js';
 import { geyserCommand } from './commands/geyserCommand.js';
 
 // Create a new client instance
@@ -19,7 +19,6 @@ const setCommand = (command) => {
 /** ---------------------------------------
  *  ADD NEW COMMANDS HERE
  ** --------------------------------------- */
-setCommand(shardCommand);
 setCommand(nextShardCommand);
 setCommand(nextRedShardCommand);
 setCommand(geyserCommand);

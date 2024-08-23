@@ -5,18 +5,22 @@ import { shardIcons } from "../assets/externalImages.js";
 import { colors } from "../lib/globals.js";
 
 /** ---------------------------------------
+ *  DEPRECATED as it's just an annoying extra step in the user flow.
+ *  The shard command should just display the next upcoming shard--if it's not today,
+ *  it is already presumed that today is a skip day.
+ * - 
  *  Displays today's shard info
  ** --------------------------------------- */
-export const shardCommand = {
-    name: "Today's Shard Info",
-    data: new SlashCommandBuilder()
-      .setName('shard')
-      .setDescription("Get today's shard fall."),
-    async execute(interaction) {
-      const embed = shardEmbed(getTodaysShard());
-		  await interaction.reply({ embeds: [embed] });
-	},
-};
+// export const shardCommand = {
+//     name: "Today's Shard Info",
+//     data: new SlashCommandBuilder()
+//       .setName('shard')
+//       .setDescription("Get today's shard fall."),
+//     async execute(interaction) {
+//       const embed = shardEmbed(getTodaysShard());
+// 		  await interaction.reply({ embeds: [embed] });
+// 	},
+// };
 
 /** ---------------------------------------
  *  Displays the next shard
@@ -24,8 +28,8 @@ export const shardCommand = {
 export const nextShardCommand = {
   name: 'Next Shard',
   data: new SlashCommandBuilder()
-    .setName('nextshard')
-    .setDescription('Get the next shard fall.'),
+    .setName('shard')
+    .setDescription('Next shard eruption'),
   async execute(interaction) {
     const embed = shardEmbed(getNextShard());
     await interaction.reply({ embeds: [embed] });
@@ -38,8 +42,8 @@ export const nextShardCommand = {
 export const nextRedShardCommand = {
   name: 'Next Red Shard',
   data: new SlashCommandBuilder()
-    .setName('nextredshard')
-    .setDescription('Get the next RED shard fall.'),
+    .setName('redshard')
+    .setDescription('Next RED shard eruption'),
   async execute(interaction) {
     const embed = shardEmbed(getNextRedShard());
     await interaction.reply({ embeds: [embed] });
