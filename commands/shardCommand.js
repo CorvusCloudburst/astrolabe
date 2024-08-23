@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
-import { getNextRedShard, getNextShard, getTodaysShard, shardTypes, stringFromShard } from "../lib/shard.js";
+import { getNextRedShard, getNextShard, getTodaysShard, shardTypes } from "../lib/shard.js";
 import { discordDate, discordTime } from "../lib/discordUtils.js";
 import { shards } from "../assets/externalImages.js";
 
