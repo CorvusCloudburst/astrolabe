@@ -4,7 +4,7 @@ export const shardIcons = {
 };
 
 export const geyserIcon = 'https://i.imgur.com/xZtbp7D.png';
-export const grandmaIcon = 'https://i.imgur.com/QXxqmZS.png';
+export const grandmaIcon = 'https://i.imgur.com/JF5spaI.png';
 
 export const mapIcons = {
     daylightPrairie: {
