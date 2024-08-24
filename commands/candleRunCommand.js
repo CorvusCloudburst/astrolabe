@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
-import { candleIcon, mapIcons } from "../assets/externalImages.js";
+import { candleIcon, mapIcons, multiIcon } from "../assets/externalImages.js";
 import { getNextCandleRun } from "../lib/candleRun.js";
 import { colors } from "../lib/globals.js";
 import { discordTime } from "../lib/discordUtils.js";
@@ -29,7 +29,7 @@ const candleRunEmbed = () =>  {
           },
           color: colors.white,
           thumbnail: {
-            url: mapIcons.valleyOfTriumph.villageOfDreams,
+            url: multiIcon,
           },
           fields: [
             {

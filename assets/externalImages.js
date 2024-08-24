@@ -7,6 +7,7 @@ export const geyserIcon = 'https://i.imgur.com/xZtbp7D.png';
 export const grandmaIcon = 'https://i.imgur.com/JF5spaI.png';
 export const turtleIcon = 'https://i.imgur.com/Sa4kaae.png';
 export const candleIcon = 'https://i.imgur.com/gwtLdx1.png';
+export const multiIcon = 'https://i.imgur.com/A1Qo4Ro.png';
 
 export const mapIcons = {
     daylightPrairie: {
