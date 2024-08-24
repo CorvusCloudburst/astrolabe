@@ -24,7 +24,7 @@ const candleRunEmbed = () =>  {
     const candleRun = getNextCandleRun();
     return {
         author: {
-            name: 'Candle Run',
+            name: 'Next Candle Run',
             icon_url: candleIcon,
           },
           color: colors.white,
