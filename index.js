@@ -4,6 +4,7 @@ import { nextRedShardCommand, nextShardCommand } from './commands/shardCommand.j
 import { geyserCommand } from './commands/geyserCommand.js';
 import { grandmaCommand } from './commands/grandmaCommand.js';
 import { turtleCommand } from './commands/turtleCommand.js';
+import { candleRunCommand } from './commands/candleRunCommand.js';
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -26,6 +27,7 @@ setCommand(nextRedShardCommand);
 setCommand(geyserCommand);
 setCommand(grandmaCommand);
 setCommand(turtleCommand);
+setCommand(candleRunCommand);
 /*  --------------------------------------- */
 
 // Notify that the bot is ready

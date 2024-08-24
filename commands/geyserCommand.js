@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
-import { getNextGeyserTime, isGeyserActive } from "../lib/geyser.js";
+import { getNextGeyserTime, isGeyserActive, getRemainingGeyserMinutes } from "../lib/geyser.js";
 import { discordTime } from "../lib/discordUtils.js";
 import { colors } from "../lib/globals.js";
 import { geyserIcon, mapIcons } from "../assets/externalImages.js";
