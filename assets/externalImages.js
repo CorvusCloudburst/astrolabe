@@ -27,7 +27,7 @@ export const mapIcons = {
     valleyOfTriumph: {
         iceRink: 'https://i.imgur.com/k7XD5bD.png',
         villageOfDreams: 'https://i.imgur.com/YC7PARF.png',
-        hermitValley: 'https://i.imgur.com/IgGomdB.png',
+        hermitValley: 'https://i.imgur.com/KNAYEGN.png',
     },
     goldenWasteland: {
         brokenTemple: 'https://i.imgur.com/LcUKMSe.png',
