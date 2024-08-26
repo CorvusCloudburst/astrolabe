@@ -13,7 +13,7 @@ export const mapIcons = {
     daylightPrairie: {
         butterflyFields: 'https://i.imgur.com/emGO8r5.png',
         prairieVillage: 'https://i.imgur.com/gdEkgLN.png',
-        prairieCaves: 'https://i.imgur.com/lp2u5l0.png',
+        prairieCaves: 'https://i.imgur.com/XPiK4RJ.png',
         birdNest: 'https://i.imgur.com/9H4YTXn.png',
         sanctuaryIslands: 'https://i.imgur.com/ueJtJwl.png',
     },
