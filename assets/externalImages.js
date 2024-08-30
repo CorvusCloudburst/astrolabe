@@ -37,7 +37,7 @@ export const mapIcons = {
         forgottenArk: 'https://i.imgur.com/kft5zbO.png',
     },
     vaultOfKnowledge: {
-        starlightDesert: 'https://i.imgur.com/KwNqQPO.png',
+        starlightDesert: 'https://i.imgur.com/NKLcmAK.png',
         jellyfishCove: 'https://i.imgur.com/Tbtjw8r.png',
     },
 };
