@@ -1,4 +1,4 @@
-![Valley of Triumph map](./assets/mapBanner.png "Valley of Triumph map") 
+![Valley of Triumph map](./assets/banner.png "Valley of Triumph map") 
 <h1 style="font-size:6rem;color:#e7c386;font-family:Times,serif;"><img src="./assets/mapIcon.jpg" alt="Citadel map icon" title="Citadel map icon"/> ˖° Astrolabe ✧˖°.</h1>
 Sky Clock + Sky Shards, for Discord.
 
